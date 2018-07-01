@@ -6,7 +6,7 @@ public class DemoMaven {
 	
 	@Test
 	public void testHello() {
-		/**Hello**/
+		/**Hello World**/
 		System.out.println("Welcome to Maven World");
 	}
 
