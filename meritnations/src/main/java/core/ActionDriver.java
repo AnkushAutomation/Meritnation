@@ -32,12 +32,19 @@ public class ActionDriver {
 		element.click();
 	}
 	
+
 	protected void selectDropDownValue(By dd, String text) {
 		waitForElement(dd);
 		WebElement dropDown = driver.findElement(dd);
 		Select drop = new Select(dropDown);
 		drop.selectByVisibleText(text);
+	}
 		
+	protected boolean textIsEqualTo(By locator, String text) {
+		waitForElement(locator);
+		WebElement element = driver.findElement(locator);
+		return element.getText().equals(text);
+
 	}
 
 }
