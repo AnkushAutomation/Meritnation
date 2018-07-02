@@ -30,5 +30,11 @@ public class ActionDriver {
 		WebElement element = driver.findElement(locator);
 		element.click();
 	}
+	
+	protected boolean textIsEqualTo(By locator, String text) {
+		waitForElement(locator);
+		WebElement element = driver.findElement(locator);
+		return element.getText().equals(text);
+	}
 
 }
