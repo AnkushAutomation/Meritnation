@@ -11,8 +11,8 @@ public class UserPage extends ActionDriver {
 		super(driver);
 	}
 	
-	public void verifyUser(String userName) {
-		textIsEqualTo(UserPageElements.displayName, userName);
+	public void verifyUser(String UserName) {
+		textIsEqualTo(UserPageElements.displayName, UserName);
 	}
 
 }

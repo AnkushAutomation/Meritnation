@@ -20,5 +20,10 @@ public class LoginPage extends ActionDriver{
 		type(LoginPageElements.passwordField, password);
 		return this;
 	}
+	
+	public UserPage clickLoginButton() {
+		click(LoginPageElements.loginButton);
+		return new UserPage(driver);
+	}
 
 }
