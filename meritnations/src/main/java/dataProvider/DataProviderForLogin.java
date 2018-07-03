@@ -10,7 +10,7 @@ public class DataProviderForLogin {
 	public Object[][] passCredentials(){
 		ExcelHandler config = new ExcelHandler("TestDataNew", "Ankush");
 		int rows = config.getRowCount();
-		Object[][] data = new Object[rows][3];
+		Object[][] data = new Object[rows-1][3];
 		for(int row=1; row<rows; row++) {
 			data[row-1][0] = config.getCellData(row, 0);
 			data[row-1][1] = config.getCellData(row, 1);
