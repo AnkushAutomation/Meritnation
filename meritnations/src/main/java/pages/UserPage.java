@@ -14,5 +14,11 @@ public class UserPage extends ActionDriver {
 	public boolean verifyUser(String UserName) {
 		return textIsEqualTo(UserPageElements.displayName, UserName);
 	}
-
+	
+	public LoginPage logout () {
+		click(UserPageElements.nameBtn);
+		click(UserPageElements.logoutBtn);
+		
+		return new LoginPage(driver);
+	}
 }
